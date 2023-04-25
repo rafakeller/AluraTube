@@ -1,19 +1,2 @@
-# alura_tubes
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Criei um plataforma para adicionar, atualizar e detelar videos do canal do youtube da Alura que um mais gosto. O banco de dados está em fireBase 
+E o FrontEnd em vue.js.
