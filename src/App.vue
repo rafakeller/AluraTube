@@ -1,14 +1,20 @@
 <template>
   <div>
     <body>
-			<Navegacao :logo="logo_src" :alt="logo_alt" :addIcon="addIcon_url" :searchIcon="pesquisa_url"/>
-			<router-view />
-		</body>
+      <Navegacao
+        :logo="logo_src"
+        :alt="logo_alt"
+        :addIcon="addIcon_url"
+        :searchIcon="pesquisa_url"
+      />
+      <router-view />
+    </body>
     <!-- <Footer /> -->
   </div>
 </template>
 
 <script>
+import firebase from "firebase/app";
 import Navegacao from "./components/Navegacao.vue";
 // import Footer from "./components/Footer.vue";
 export default {
@@ -16,6 +22,7 @@ export default {
     Navegacao,
     // Footer,
   },
+
   data() {
     return {
       logo_src: "./img/Logo.png",
@@ -23,6 +30,20 @@ export default {
       pesquisa_url: "./img/pesquisar.png",
       addIcon_url: "./img/addIcon.png",
     };
+  },
+  mounted() {
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyAnqsJkhuGrzE5bmawRAIRm3Fw0Nf1Nxcs",
+      authDomain: "aluratube-42.firebaseapp.com",
+      projectId: "aluratube-42",
+      storageBucket: "aluratube-42.appspot.com",
+      messagingSenderId: "376228157016",
+      appId: "1:376228157016:web:968639cf13a0b54adf1c2d",
+    };
+
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
   },
 };
 </script>
